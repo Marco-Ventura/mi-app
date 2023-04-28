@@ -1,16 +1,16 @@
 import React from 'react';
 import '../styleSheets/testimonio.css'
 
-export function Testimonio(){
+export function Testimonio(props){
   return (
     <div className='contenedor-testimonio'>
       <img className='imagen-testimonio'
-            src={require('../imagenes/testimonio1.png')} 
+            src={require(`../imagenes/testimonio${props.imagen}.png`)} 
             alt='foto de hombre'/>
       <div className='texto-testimonio-contenedor'>
-        <p className='nombre-testimonio'> Jin Jo en Tokyo </p>
-        <p className='cargo-testimonio'>Ingeniera en Spotify</p>
-        <p className='texto-testimonio'>ella a sido infdfd dkkdddk  kddkdjj dkdjndjd djdk kdj dkd kdkdk ext analytics is a fantastic tool for delivering insight over high volumes of text data, and multiple sources. And its automated brain allows it to do this in a quick and scalable manner. However, it still needs a human heart to deliver meaning and interpretation to the results. ... On November 18, join experts from Ipsos, Convosphere and BT for a discussion about what social intelligence research is, and how best to communicate the benefit within your organization.</p>
+        <p className='nombre-testimonio'> <b>{props.name}</b> in {props.city} </p>
+        <p className='cargo-testimonio'>{props.job} in <b>{props.company}</b></p>
+        <p className='texto-testimonio'>"{props.testimony}"</p>
         
         
       </div>      
